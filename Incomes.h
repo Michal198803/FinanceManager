@@ -1,7 +1,8 @@
-//
-// Created by britenet on 2018-02-14.
-//
+
 #include <iostream>
+#include <vector>
+#include "Income.h"
+#include "UsersFile.h"
 #ifndef FINANCEMANAGER_INCOMES_H
 #define FINANCEMANAGER_INCOMES_H
 
@@ -10,40 +11,20 @@ using namespace std;
 class Incomes {
 
 private:
-    int userId,incomeId,date;
+    vector<Income> incomesVect;
 public:
-    int getDate() const;
+  vector<Income> getIncomesVect();
 
-    void setDate(int date);
+    void setIncomesVect(vector<Income> &incomesVect);
 
-private:
-    float amount;
-    string incomeName;
-public:
-    const string &getIncomeName() const;
-
-    void setIncomeName(const string &incomeName);
-
-    int getUserId() const;
-
-    void setUserId(int userId);
-
-    int getIncomeId() const;
-
-    void setIncomeId(int incomeId);
-
-    int getAmount() const;
-
-    void setAmount(int amount);
+    void addNewIncome(vector<Income>&incomesVect,UsersFile &usersFile);
+    void loadIncomesFromXmlToVector();
 
 
 
 
 
 };
-
-
-
 
 
 #endif //FINANCEMANAGER_INCOMES_H

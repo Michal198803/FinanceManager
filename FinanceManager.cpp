@@ -30,7 +30,7 @@ int main() {
 
             case 1:
 
-                userFile.logOn();
+              userFile.logOn();
 
                 break;
             case 2:
